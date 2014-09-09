@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		592A258019BE862300F4A3FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592A257F19BE862300F4A3FE /* Cocoa.framework */; };
+		592A258A19BE862300F4A3FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 592A258819BE862300F4A3FE /* InfoPlist.strings */; };
+		592A258C19BE862300F4A3FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A258B19BE862300F4A3FE /* main.m */; };
+		592A259019BE862300F4A3FE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 592A258E19BE862300F4A3FE /* Credits.rtf */; };
+		592A259319BE862300F4A3FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A259219BE862300F4A3FE /* AppDelegate.m */; };
+		592A259619BE862400F4A3FE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592A259419BE862400F4A3FE /* MainMenu.xib */; };
+		592A259819BE862400F4A3FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592A259719BE862400F4A3FE /* Images.xcassets */; };
+		592A259F19BE862400F4A3FE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592A259E19BE862400F4A3FE /* XCTest.framework */; };
+		592A25A019BE862400F4A3FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592A257F19BE862300F4A3FE /* Cocoa.framework */; };
+		592A25A819BE862400F4A3FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 592A25A619BE862400F4A3FE /* InfoPlist.strings */; };
+		592A25AA19BE862400F4A3FE /* heathstoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 592A25A919BE862400F4A3FE /* heathstoneTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		592A25A119BE862400F4A3FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 592A257419BE862300F4A3FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 592A257B19BE862300F4A3FE;
+			remoteInfo = heathstone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		592A257C19BE862300F4A3FE /* heathstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heathstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		592A257F19BE862300F4A3FE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		592A258219BE862300F4A3FE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		592A258319BE862300F4A3FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		592A258419BE862300F4A3FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		592A258719BE862300F4A3FE /* heathstone-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "heathstone-Info.plist"; sourceTree = "<group>"; };
+		592A258919BE862300F4A3FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		592A258B19BE862300F4A3FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		592A258D19BE862300F4A3FE /* heathstone-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "heathstone-Prefix.pch"; sourceTree = "<group>"; };
+		592A258F19BE862300F4A3FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		592A259119BE862300F4A3FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		592A259219BE862300F4A3FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		592A259519BE862400F4A3FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		592A259719BE862400F4A3FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		592A259D19BE862400F4A3FE /* heathstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = heathstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		592A259E19BE862400F4A3FE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		592A25A519BE862400F4A3FE /* heathstoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "heathstoneTests-Info.plist"; sourceTree = "<group>"; };
+		592A25A719BE862400F4A3FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		592A25A919BE862400F4A3FE /* heathstoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = heathstoneTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		592A257919BE862300F4A3FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592A258019BE862300F4A3FE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592A259A19BE862400F4A3FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592A25A019BE862400F4A3FE /* Cocoa.framework in Frameworks */,
+				592A259F19BE862400F4A3FE /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		592A257319BE862300F4A3FE = {
+			isa = PBXGroup;
+			children = (
+				592A258519BE862300F4A3FE /* heathstone */,
+				592A25A319BE862400F4A3FE /* heathstoneTests */,
+				592A257E19BE862300F4A3FE /* Frameworks */,
+				592A257D19BE862300F4A3FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		592A257D19BE862300F4A3FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				592A257C19BE862300F4A3FE /* heathstone.app */,
+				592A259D19BE862400F4A3FE /* heathstoneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		592A257E19BE862300F4A3FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				592A257F19BE862300F4A3FE /* Cocoa.framework */,
+				592A259E19BE862400F4A3FE /* XCTest.framework */,
+				592A258119BE862300F4A3FE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		592A258119BE862300F4A3FE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				592A258219BE862300F4A3FE /* AppKit.framework */,
+				592A258319BE862300F4A3FE /* CoreData.framework */,
+				592A258419BE862300F4A3FE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		592A258519BE862300F4A3FE /* heathstone */ = {
+			isa = PBXGroup;
+			children = (
+				592A259119BE862300F4A3FE /* AppDelegate.h */,
+				592A259219BE862300F4A3FE /* AppDelegate.m */,
+				592A259419BE862400F4A3FE /* MainMenu.xib */,
+				592A259719BE862400F4A3FE /* Images.xcassets */,
+				592A258619BE862300F4A3FE /* Supporting Files */,
+			);
+			path = heathstone;
+			sourceTree = "<group>";
+		};
+		592A258619BE862300F4A3FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				592A258719BE862300F4A3FE /* heathstone-Info.plist */,
+				592A258819BE862300F4A3FE /* InfoPlist.strings */,
+				592A258B19BE862300F4A3FE /* main.m */,
+				592A258D19BE862300F4A3FE /* heathstone-Prefix.pch */,
+				592A258E19BE862300F4A3FE /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		592A25A319BE862400F4A3FE /* heathstoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				592A25A919BE862400F4A3FE /* heathstoneTests.m */,
+				592A25A419BE862400F4A3FE /* Supporting Files */,
+			);
+			path = heathstoneTests;
+			sourceTree = "<group>";
+		};
+		592A25A419BE862400F4A3FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				592A25A519BE862400F4A3FE /* heathstoneTests-Info.plist */,
+				592A25A619BE862400F4A3FE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		592A257B19BE862300F4A3FE /* heathstone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592A25AD19BE862400F4A3FE /* Build configuration list for PBXNativeTarget "heathstone" */;
+			buildPhases = (
+				592A257819BE862300F4A3FE /* Sources */,
+				592A257919BE862300F4A3FE /* Frameworks */,
+				592A257A19BE862300F4A3FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = heathstone;
+			productName = heathstone;
+			productReference = 592A257C19BE862300F4A3FE /* heathstone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		592A259C19BE862400F4A3FE /* heathstoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592A25B019BE862400F4A3FE /* Build configuration list for PBXNativeTarget "heathstoneTests" */;
+			buildPhases = (
+				592A259919BE862400F4A3FE /* Sources */,
+				592A259A19BE862400F4A3FE /* Frameworks */,
+				592A259B19BE862400F4A3FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				592A25A219BE862400F4A3FE /* PBXTargetDependency */,
+			);
+			name = heathstoneTests;
+			productName = heathstoneTests;
+			productReference = 592A259D19BE862400F4A3FE /* heathstoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		592A257419BE862300F4A3FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Andy Dremeaux";
+				TargetAttributes = {
+					592A259C19BE862400F4A3FE = {
+						TestTargetID = 592A257B19BE862300F4A3FE;
+					};
+				};
+			};
+			buildConfigurationList = 592A257719BE862300F4A3FE /* Build configuration list for PBXProject "heathstone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 592A257319BE862300F4A3FE;
+			productRefGroup = 592A257D19BE862300F4A3FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				592A257B19BE862300F4A3FE /* heathstone */,
+				592A259C19BE862400F4A3FE /* heathstoneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		592A257A19BE862300F4A3FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592A258A19BE862300F4A3FE /* InfoPlist.strings in Resources */,
+				592A259819BE862400F4A3FE /* Images.xcassets in Resources */,
+				592A259019BE862300F4A3FE /* Credits.rtf in Resources */,
+				592A259619BE862400F4A3FE /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592A259B19BE862400F4A3FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592A25A819BE862400F4A3FE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		592A257819BE862300F4A3FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592A259319BE862300F4A3FE /* AppDelegate.m in Sources */,
+				592A258C19BE862300F4A3FE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592A259919BE862400F4A3FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592A25AA19BE862400F4A3FE /* heathstoneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		592A25A219BE862400F4A3FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 592A257B19BE862300F4A3FE /* heathstone */;
+			targetProxy = 592A25A119BE862400F4A3FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		592A258819BE862300F4A3FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592A258919BE862300F4A3FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		592A258E19BE862300F4A3FE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592A258F19BE862300F4A3FE /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		592A259419BE862400F4A3FE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592A259519BE862400F4A3FE /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		592A25A619BE862400F4A3FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592A25A719BE862400F4A3FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		592A25AB19BE862400F4A3FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		592A25AC19BE862400F4A3FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		592A25AE19BE862400F4A3FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "heathstone/heathstone-Prefix.pch";
+				INFOPLIST_FILE = "heathstone/heathstone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		592A25AF19BE862400F4A3FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "heathstone/heathstone-Prefix.pch";
+				INFOPLIST_FILE = "heathstone/heathstone-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		592A25B119BE862400F4A3FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/heathstone.app/Contents/MacOS/heathstone";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "heathstone/heathstone-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "heathstoneTests/heathstoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		592A25B219BE862400F4A3FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/heathstone.app/Contents/MacOS/heathstone";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "heathstone/heathstone-Prefix.pch";
+				INFOPLIST_FILE = "heathstoneTests/heathstoneTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		592A257719BE862300F4A3FE /* Build configuration list for PBXProject "heathstone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592A25AB19BE862400F4A3FE /* Debug */,
+				592A25AC19BE862400F4A3FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		592A25AD19BE862400F4A3FE /* Build configuration list for PBXNativeTarget "heathstone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592A25AE19BE862400F4A3FE /* Debug */,
+				592A25AF19BE862400F4A3FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		592A25B019BE862400F4A3FE /* Build configuration list for PBXNativeTarget "heathstoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592A25B119BE862400F4A3FE /* Debug */,
+				592A25B219BE862400F4A3FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 592A257419BE862300F4A3FE /* Project object */;
+}
