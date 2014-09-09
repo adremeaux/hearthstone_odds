@@ -8,26 +8,26 @@
 
 #import "AppDelegate.h"
 
-#define TOTAL 20
-#define LEGEND 2
-#define EPIC 3
-#define RARE 5
-#define COMMON 10
+#define TOTAL 203
+#define LEGEND 21
+#define EPIC 33
+#define RARE 67
+#define COMMON 82
+#define TRIALS 1500
 
 //types are additive for efficiency
 #define CHANCE_LEGEND 0.01194f
-#define CHANCE_EPIC 0.04592f
-#define CHANCE_RARE 0.22762f
+#define CHANCE_EPIC 0.05786f
+#define CHANCE_RARE 0.28548f
 
-#define GLEGEND 0.10244f
-#define GEPIC 0.0719f
-#define GRARE 0.0642f
-#define GCOMMON 0.021f
+#define GLEGEND 0.0929f
+#define GEPIC 0.0671f
+#define GRARE 0.06033f
+#define GCOMMON 0.02057f
 
-#define TRIALS 3
 
-#define DEBUG_LOGS YES
-#define MAIN_LOGS YES
+#define DEBUG_LOGS NO
+#define MAIN_LOGS NO
 
 typedef enum {
 	typeCommon = 5,
@@ -113,7 +113,7 @@ typedef enum {
 	}
 	
 	NSLog(@"average packs opened: %f", average);
-	NSLog(@"golds average: %f", goldsAverage);
+	NSLog(@"gold cards average: %f", goldsAverage);
 	NSLog(@"---");
 }
 
