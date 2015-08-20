@@ -13,13 +13,14 @@
 #define EPIC 33
 #define RARE 67
 #define COMMON 82
-#define TRIALS 1500
+#define TRIALS 10000
 
 //types are additive for efficiency
 #define CHANCE_LEGEND 0.01194f
 #define CHANCE_EPIC 0.05786f
 #define CHANCE_RARE 0.28548f
 
+#define INCLUDE_GOLDS NO
 #define GLEGEND 0.0929f
 #define GEPIC 0.0671f
 #define GRARE 0.06033f
@@ -51,9 +52,15 @@ typedef enum {
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	
+	//[self runTotalPacksTrials];
+	
+	[self runLegendsTrials];
+}
+
+- (void)runTotalPacksTrials {
 	float average = 0;
 	float goldsAverage = 0;
-
+	
 	for (int trialNum = 0; trialNum < TRIALS; trialNum++) {
 		if (trialNum % 100 == 0) NSLog(@"trial %d", trialNum);
 		
@@ -96,11 +103,11 @@ typedef enum {
 				goldsAverage = ((goldsAverage * trialNum) + goldsOpened) / (trialNum + 1);
 				
 				int dustReq = [self remainingDust:dict];
-//				for (NSObject *key in [dict allKeys]) {
-//					NSNumber *n = (NSNumber *)key;
-//					int thisDust = [self cardType:[n intValue]];
-//					NSLog(@"%d: %d - %d", [n intValue], [dict[key] intValue], thisDust);
-//				}
+				//				for (NSObject *key in [dict allKeys]) {
+				//					NSNumber *n = (NSNumber *)key;
+				//					int thisDust = [self cardType:[n intValue]];
+				//					NSLog(@"%d: %d - %d", [n intValue], [dict[key] intValue], thisDust);
+				//				}
 				if (MAIN_LOGS) {
 					NSLog(@"dust: %d of %d", dust, dustReq);
 					NSLog(@"set complete with %d packs opened, %d golds", packsOpened, goldsOpened);
@@ -117,12 +124,33 @@ typedef enum {
 	NSLog(@"---");
 }
 
+- (void)runLegendsTrials {
+	int lookingForLessThan = 10;
+	int packsWithLessThan = 0;
+	int packsToOpen = 400;
+	float avg = 0.0;
+	
+	for (int trial = 0; trial < TRIALS; trial++) {
+		int numLegends = 0;
+		for (int i = 0; i < packsToOpen; i++) {
+			numLegends += [self numberOfCardsOfType:typeLegend inPack:[self openPack]];
+		}
+		avg += numLegends;
+		if (numLegends < lookingForLessThan) packsWithLessThan++;
+		//NSLog(@"num: %d", numLegends);
+	}
+	
+	NSLog(@"average legendaries: %f", (avg / TRIALS));
+	NSLog(@"packs with less than %d legends: %d", lookingForLessThan, packsWithLessThan);
+}
+
 - (NSArray *)openPack {
 	int cardsPerPack = 5;
 	NSMutableArray *cards = [[NSMutableArray alloc] init];
 	for (int i = 0; i < cardsPerPack; i++) {
 		double val = ((double)arc4random() / 0x100000000);
 		double goldVal = ((double)arc4random() / 0x100000000);
+		if (!INCLUDE_GOLDS) goldVal = 1.0;
 		int card;
 		BOOL isGold = NO;
 		if (val < CHANCE_LEGEND) {
@@ -168,6 +196,16 @@ typedef enum {
 		case typeLegend: return typeGLegend; break;
 		default: @throw [NSException exceptionWithName:@"blah" reason:@"bad type" userInfo:@{@"type": @(type)}]; break;
 	}
+}
+	
+- (int)numberOfCardsOfType:(CardType)type inPack:(NSArray *)pack {
+	int count = 0;
+	for (NSNumber *n in pack) {
+		if ([self cardType:[n intValue]] == type) {
+			count++;
+		}
+	}
+	return count;
 }
 
 - (BOOL)packComplete:(NSDictionary *)dict {
