@@ -141,7 +141,8 @@ typedef enum {
 	}
 	
 	NSLog(@"average legendaries: %f", (avg / TRIALS));
-	NSLog(@"packs with less than %d legends: %d", lookingForLessThan, packsWithLessThan);
+	NSLog(@"sets with less than %d legends: %d out of %d", lookingForLessThan, packsWithLessThan, TRIALS);
+	NSLog(@"chances: %f, or 1 in %f", (float)(packsWithLessThan) / TRIALS, (1.0 / ((float)(packsWithLessThan) / TRIALS)));
 }
 
 - (NSArray *)openPack {
